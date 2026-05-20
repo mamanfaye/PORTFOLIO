@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Portfolio Mariama Faye</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#050816] text-white overflow-x-hidden">
+
+    <!-- ARRIÈRE PLAN ANIMÉ -->
+    <div class="background-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- HEADER -->
+    <header class="
+    fixed top-0 left-0 w-full
+    flex justify-between items-center
+    px-10 py-5
+    bg-[#020617]/90
+    backdrop-blur-md
+    border-b border-cyan-400/20
+    z-50
+    ">
+
+        <!-- LOGO -->
+        <h1 class="
+        text-4xl
+        font-bold
+        text-cyan-400
+        drop-shadow-[0_0_15px_#00f7ff]
+        ">
+            MF
+        </h1>
+
+        <!-- MENU -->
+        <nav class="flex gap-10 text-cyan-300 text-xl">
+
+            <a href="#home" class="hover:text-white duration-300">
+                Accueil
+            </a>
+
+            <a href="#competences" class="hover:text-white duration-300">
+                Compétences
+            </a>
+
+            <a href="#projets" class="hover:text-white duration-300">
+                Projets
+            </a>
+
+            <a href="#contact" class="hover:text-white duration-300">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- SECTION HOME -->
+    <section id="home" class="
+    min-h-screen
+    flex flex-col
+    justify-center
+    items-center
+    text-center
+    px-5
+    pt-40
+    ">
+
+        <!-- PHOTO -->
+        <div class="
+        w-64 h-64
+        rounded-full
+        p-1
+        bg-gradient-to-r
+        from-cyan-400
+        via-fuchsia-500
+        to-cyan-400
+        shadow-[0_0_40px_#00f7ff]
+        animate-pulse
+        ">
+
+            <img
+                src="images/mariama.jpg"
+                alt="Mariama Faye"
+
+                class="
+                w-full
+                h-full
+                object-cover
+                rounded-full
+                border-4
+                border-[#050816]
+                "
+            >
+
+        </div>
+
+        <!-- NOM -->
+        <h1 class="
+        mt-10
+        text-7xl
+        font-bold
+        bg-gradient-to-r
+        from-cyan-400
+        via-white
+        to-fuchsia-500
+        bg-clip-text
+        text-transparent
+        animate-pulse
+        ">
+            Mariama Faye
+        </h1>
+
+        <!-- TEXTE -->
+        <p class="
+        mt-5
+        text-2xl
+        text-gray-300
+        ">
+        </p>
+
+        <!-- BOUTON -->
+        <a href="#projets"
+        class="
+        mt-10
+        px-10 py-4
+        rounded-2xl
+        text-black
+        text-xl
+        font-bold
+        bg-cyan-400
+        shadow-[0_0_30px_#00f7ff]
+        hover:scale-105
+        duration-300
+        ">
+        </a>
+
+    </section>
+
+</body>
+</html>

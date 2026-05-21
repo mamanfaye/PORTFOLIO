@@ -1,155 +1,171 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Mariama Faye</title>
-
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-[#050816] text-white overflow-x-hidden">
+<!-- RÉSEAU ANIMÉ -->
+<canvas id="network-canvas"></canvas>
 
-    <!-- ARRIÈRE PLAN ANIMÉ -->
-    <div class="background-animation">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+<!-- HEADER -->
+<header class="header">
+    <h1 class="logo">MF</h1>
+    <nav class="navbar">
+        <a href="#home">Accueil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#experience">Expérience</a>
+        <a href="#diplomes">Diplômes</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 / ☀️</button>
+</header>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="stat-item">
+        <span class="stat-number" data-target="2">0</span>
+        <span class="stat-label">Années<br>d'expérience</span>
     </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="3">0</span>
+        <span class="stat-label">Expérience<br>Pro</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" data-target="5">0</span>
+        <span class="stat-label">Compétences</span>
+    </div>
+</div>
 
-    <!-- HEADER -->
-    <header class="
-    fixed top-0 left-0 w-full
-    flex justify-between items-center
-    px-10 py-5
-    bg-[#020617]/90
-    backdrop-blur-md
-    border-b border-cyan-400/20
-    z-50
-    ">
+<!-- HOME -->
+<section id="home" class="home">
+    <div class="hero-card">
 
-        <!-- LOGO -->
-        <h1 class="
-        text-4xl
-        font-bold
-        text-cyan-400
-        drop-shadow-[0_0_15px_#00f7ff]
-        ">
-            MF
-        </h1>
-
-        <!-- MENU -->
-        <nav class="flex gap-10 text-cyan-300 text-xl">
-
-            <a href="#home" class="hover:text-white duration-300">
-                Accueil
-            </a>
-
-            <a href="#competences" class="hover:text-white duration-300">
-                Compétences
-            </a>
-
-            <a href="#projets" class="hover:text-white duration-300">
-                Projets
-            </a>
-
-            <a href="#contact" class="hover:text-white duration-300">
-                Contact
-            </a>
-
-        </nav>
-
-    </header>
-
-    <!-- SECTION HOME -->
-    <section id="home" class="
-    min-h-screen
-    flex flex-col
-    justify-center
-    items-center
-    text-center
-    px-5
-    pt-40
-    ">
-
-        <!-- PHOTO -->
-        <div class="
-        w-64 h-64
-        rounded-full
-        p-1
-        bg-gradient-to-r
-        from-cyan-400
-        via-fuchsia-500
-        to-cyan-400
-        shadow-[0_0_40px_#00f7ff]
-        animate-pulse
-        ">
-
-            <img
-                src="images/mariama.jpg"
-                alt="Mariama Faye"
-
-                class="
-                w-full
-                h-full
-                object-cover
-                rounded-full
-                border-4
-                border-[#050816]
-                "
-            >
-
+        <div class="photo-ring">
+            <!-- Remplace src par ton image : <img src="images/mariama.jpg" alt="Mariama Faye"> -->
+            <div class="photo-placeholder">MF</div>
         </div>
 
-        <!-- NOM -->
-        <h1 class="
-        mt-10
-        text-7xl
-        font-bold
-        bg-gradient-to-r
-        from-cyan-400
-        via-white
-        to-fuchsia-500
-        bg-clip-text
-        text-transparent
-        animate-pulse
-        ">
-            Mariama Faye
-        </h1>
+        <h1 class="title"><span class="typing"></span></h1>
+        <p class="subtitle">Développeuse Web • Designer</p>
 
-        <!-- TEXTE -->
-        <p class="
-        mt-5
-        text-2xl
-        text-gray-300
-        ">
+        <p class="hero-description">
+            Passionnée par le développement, l'UI/UX et les technologies modernes.
+            Je construis des applications élégantes, performantes et innovantes.
         </p>
 
-        <!-- BOUTON -->
-        <a href="#projets"
-        class="
-        mt-10
-        px-10 py-4
-        rounded-2xl
-        text-black
-        text-xl
-        font-bold
-        bg-cyan-400
-        shadow-[0_0_30px_#00f7ff]
-        hover:scale-105
-        duration-300
-        ">
-        </a>
+        <div class="buttons">
+            <a href="#contact" class="btn">Contact</a>
+            <a href="#competences" class="btn btn-outline">Compétences</a>
+        </div>
+    </div>
+</section>
 
-    </section>
+<!-- COMPÉTENCES -->
+<section id="competences" class="section">
+    <h2 class="section-title">Compétences</h2>
+    <div class="skills-container">
+        <div class="skill card">
+            <p>HTML / CSS</p>
+            <div class="progress"><span style="width: 90%"></span></div>
+        </div>
+        <div class="skill card">
+            <p>JavaScript</p>
+            <div class="progress"><span style="width: 80%"></span></div>
+        </div>
+        <div class="skill card">
+            <p>UI / UX Design</p>
+            <div class="progress"><span style="width: 75%"></span></div>
+        </div>
+    </div>
+</section>
 
-</body>
-</html>
+<!-- EXPÉRIENCE -->
+<section id="experience" class="section">
+    <h2 class="section-title">Expérience</h2>
+    <div class="timeline">
+        <div class="exp-box card">
+            <h3>Développeuse Web</h3>
+            <span>2024 - Présent</span>
+            <p>Création de sites web modernes avec HTML, CSS et JavaScript.</p>
+        </div>
+        <div class="exp-box card">
+            <h3>Stage Développement</h3>
+            <span>2023</span>
+            <p>Participation à des projets web et amélioration UI/UX.</p>
+        </div>
+    </div>
+</section>
+
+<!-- DIPLÔMES -->
+<section id="diplomes" class="section">
+    <h2 class="section-title">Diplômes</h2>
+    <div class="diplomes-container">
+        <div class="diplome-card card">
+            <h3>Licence Informatique</h3>
+            <p>Université</p>
+            <span>2022 - 2025</span>
+        </div>
+        <div class="diplome-card card">
+            <h3>Baccalauréat</h3>
+            <p>Série Scientifique</p>
+            <span>2021</span>
+        </div>
+    </div>
+</section>
+
+<section id="projets" class="section">
+
+    <h2 class="section-title">Projets</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card card">
+            <img src="images/projet1.jpg" alt="Projet 1">
+
+            <div class="project-content">
+                <h3>Portfolio</h3>
+                <p>Site moderne avec animations et design UI/UX.</p>
+                <a href="#" class="btn">Voir</a>
+            </div>
+        </div>
+
+        <div class="project-card card">
+            <img src="images/projet2.jpg" alt="Projet 2">
+
+            <div class="project-content">
+                <h3>E-commerce</h3>
+                <p>Site de vente avec interface moderne.</p>
+                <a href="#" class="btn">Voir</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <form class="contact-form card">
+        <div class="input-box">
+            <input type="text" required>
+            <label>Nom</label>
+        </div>
+        <div class="input-box">
+            <input type="email" required>
+            <label>Email</label>
+        </div>
+        <div class="input-box">
+            <textarea required></textarea>
+            <label>Message</label>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+ </header>
+ </body>

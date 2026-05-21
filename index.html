@@ -21,7 +21,7 @@
         <a href="#competences">Compétences</a>
         <a href="#experience">Expérience</a>
         <a href="#diplomes">Diplômes</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn bg-cyan-400 hover:bg-cyan-300 text-black px-6 py-2 rounded-full transition"> Contact</a>
         <a href="https://github.com/..." target="_blank">GitHub</a>
     </nav>
     <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙 / ☀️</button>
@@ -60,7 +60,7 @@
             Je construis des applications élégantes, performantes et innovantes.
         </p>
 
-        <div class="buttons">
+        <div class="buttons flex justify-center gap-4 mt-6"></div>
             <a href="#contact" class="btn">Contact</a>
             <a href="#competences" class="btn btn-outline">Compétences</a>
         </div>
@@ -75,11 +75,11 @@
             <p>HTML / CSS</p>
             <div class="progress"><span style="width: 90%"></span></div>
         </div>
-        <div class="skill card">
+        <div class="skill card p-4 rounded-xl"></div>
             <p>JavaScript</p>
             <div class="progress"><span style="width: 80%"></span></div>
         </div>
-        <div class="skill card">
+        <div class="skill card hover:scale-105 transition duration-300"></div>
             <p>UI / UX Design</p>
             <div class="progress"><span style="width: 75%"></span></div>
         </div>
@@ -159,15 +159,15 @@
     <form class="contact-form card">
         <div class="input-box">
             <input type="text" required>
-            <label>Nom</label>
+            <label>Nom: </label>
         </div>
         <div class="input-box">
             <input type="email" required>
-            <label>Email</label>
+            <label>Email: </label>
         </div>
         <div class="input-box">
             <textarea required></textarea>
-            <label>Message</label>
+            <label>Message:</label>
         </div>
         <button type="submit">Envoyer</button>
     </form>

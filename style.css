@@ -321,6 +321,9 @@
 .project-card:hover{
     box-shadow: 0 0 25px var(--accent);
 }
+html{
+    scroll-behavior: smooth;
+}
         @keyframes growBar { from { width: 0 !important; } }
 
         /* ── TIMELINE ── */

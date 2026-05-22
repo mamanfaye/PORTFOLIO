@@ -1,35 +1,35 @@
 :root[data-theme="dark"] {
-            --bg: #020d1a;
-            --bg2: #041225;
+            --bg: linear-gradient(135deg, #ff4d6d, #c9184a, #590d22);
+            --bg2:  linear-gradient(135deg, #ff758f, #ff4d6d, #c9184a);
             --card: rgba(0, 180, 200, 0.08);
             --card-border: rgba(0, 220, 255, 0.3);
             --text: #e0f7ff;
             --muted: #7ecfdf;
-            --accent: #00e5ff;
-            --accent2: #7b2fff;
+            --accent: #ff6b6b;
+            --accent2: #22c55e;
             --header-bg: rgba(2, 13, 26, 0.92);
         }
         :root[data-theme="light"]
         :root[data-theme="dark"] {
-            --bg: #020d1a;
-            --bg2: #041225;
+            --bg: linear-gradient(135deg, #ff4d6d, #c9184a, #590d22);
+            --bg2:  linear-gradient(135deg, #ff758f, #ff4d6d, #c9184a);
             --card: rgba(0, 180, 200, 0.08);
             --card-border: rgba(0, 220, 255, 0.3);
             --text: #e0f7ff;
             --muted: #7ecfdf;
-            --accent: #00e5ff;
-            --accent2: #7b2fff;
+            --accent: #ff6b6b;
+            --accent2: #22c55e;
             --header-bg: rgba(2, 13, 26, 0.92);
         }
         :root[data-theme="light"] {
-            --bg: #e8f8ff;
-            --bg2: #d0f0fa;
+            --bg: linear-gradient(135deg, #ff4d6d, #c9184a, #590d22);
+            --bg2:  linear-gradient(135deg, #ff758f, #ff4d6d, #c9184a);
             --card: rgba(0, 180, 200, 0.12);
             --card-border: rgba(0, 150, 200, 0.4);
             --text: #062030;
             --muted: #1a7a99;
-            --accent: #007aad;
-            --accent2: #6a00e0;
+            --accent: #ff6b6b;
+            --accent2: #22c55e;
             --header-bg: rgba(232, 248, 255, 0.92);
         }
 
@@ -37,11 +37,36 @@
 
         body {
             font-family: 'Rajdhani', sans-serif;
-            background: var(--bg);
+            background: linear-gradient(135deg, #0f172a, #020d1a, #1e293b);
             color: var(--text);
             transition: background 0.4s, color 0.4s;
             overflow-x: hidden;
         }
+        body::before{
+    content: "";
+    position: fixed;
+    top: -200px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.2), transparent);
+    filter: blur(100px);
+    z-index: 0;
+    background: var(--bg);
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    bottom: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.2), transparent);
+    filter: blur(100px);
+    z-index: 0;
+    background: var(--bg);
+}
 
         /* ── CANVAS RÉSEAU ── */
         #network-canvas {
